@@ -1,0 +1,30 @@
+.index-container {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.index-container h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #2D3436;
+}
+
+.index-buttons {
+    margin-top: 40px;
+}
+
+.index-buttons a {
+    display: inline-block;
+    margin: 0 15px;
+    background: #0984e3;
+    padding: 15px 25px;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.index-buttons a:hover {
+    background: #065a98;
+}

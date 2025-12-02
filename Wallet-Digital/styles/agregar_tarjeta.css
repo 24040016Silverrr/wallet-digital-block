@@ -1,0 +1,16 @@
+.tarjeta-box {
+    width: 550px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+.tarjeta-box input,
+.tarjeta-box select {
+    margin-bottom: 18px;
+}
+
+.tarjeta-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}

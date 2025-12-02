@@ -1,0 +1,93 @@
+<html login="es">
+<?php
+include("conexion.php");
+
+if ($_POST) {
+    $nombre = $_POST["nombre"];
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+
+    $imagen = $_FILES["imagen"]["name"];
+    $ruta = "uploads/usuarios/" . $imagen;
+    move_uploaded_file($_FILES["imagen"]["tmp_name"], $ruta);
+
+    $conexion->query("INSERT INTO usuarios (nombre, username, email, password, imagen)
+                      VALUES ('$nombre', '$username', '$email', '$password', '$imagen')");
+    header("Location: login.php");
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Crear Cuenta</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<style>
+    body {
+        background:#eef1f7;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+
+    .register-box{
+        width:420px;
+        background:white;
+        padding:35px;
+        border-radius:18px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.12);
+        animation:fadeIn .5s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity:0; transform:translateY(15px); }
+        to { opacity:1; transform:translateY(0); }
+    }
+
+    .title{
+        text-align:center;
+        font-size:26px;
+        font-weight:700;
+        margin-bottom:25px;
+    }
+
+    .btn-main{
+        width:100%;
+        padding:12px;
+        font-size:17px;
+        font-weight:600;
+        border-radius:10px;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="register-box">
+
+    <h2 class="title">Crear Cuenta</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <input class="form-control mt-2" type="text" name="nombre" placeholder="Nombre completo" required>
+
+        <input class="form-control mt-3" type="text" name="username" placeholder="Nombre de usuario" required>
+
+        <input class="form-control mt-3" type="email" name="email" placeholder="Correo electrónico" required>
+
+        <input class="form-control mt-3" type="password" name="password" placeholder="Contraseña" required>
+
+        <label class="mt-3 fw-bold">Foto de perfil:</label>
+        <input type="file" name="imagen" class="form-control" required>
+
+        <button class="btn btn-primary btn-main mt-4">Registrarme</button>
+    </form>
+
+</div>
+
+</body>
+</html>
+

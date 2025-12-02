@@ -1,0 +1,142 @@
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f9;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #2D3436;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #74b9ff;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+/* FORMULARIOS */
+.form-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* BOTONES */
+.btn {
+    width: 100%;
+    background: #0984e3;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0768b3;
+}
+
+/* LINKS */
+.link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.link a {
+    text-decoration: none;
+    color: #0984e3;
+    font-weight: 500;
+}
+
+.link a:hover {
+    color: #065a98;
+}
+
+/* CARDS DE TARJETAS */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-info {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.btn-upload {
+    background-color: #0275d8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.btn-upload:hover {
+    background-color: #025aa5;
+}
